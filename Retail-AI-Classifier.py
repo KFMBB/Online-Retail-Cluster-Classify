@@ -90,6 +90,22 @@ if uploaded_file is not None:
     fig = px.pie(aggregated_df, names='Segment', title='Customer Segment Distribution')
     st.plotly_chart(fig)
 
+    # Visualization - 3D Scatter Plot
+    st.write("### 3D Scatter Plot of Customer Segments:")
+    scatter_3d_fig = px.scatter_3d(
+    aggregated_df, 
+    x='MonetaryValue', 
+    y='Frequency', 
+    z='Recency', 
+    color='Segment', 
+    title='3D Scatter Plot of Customer Segments',
+    labels={'MonetaryValue': 'Monetary Value', 'Frequency': 'Frequency', 'Recency': 'Recency'},
+    hover_data=['CustomerID']
+)
+    scatter_3d_fig.update_traces(marker=dict(size=5))  # Adjust point size for clarity
+    st.plotly_chart(scatter_3d_fig)
+
+
     # Download results
     st.write("### Download Segmentation Results:")
     csv = aggregated_df.to_csv(index=False)
