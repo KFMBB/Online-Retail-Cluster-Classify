@@ -60,17 +60,17 @@ if uploaded_file is not None:
 
     # Model selection
     model_files = {
-        "Decision Tree": "/mnt/data/dtc_model.pkl",
-        "Random Forest": "/mnt/data/bagging_clf_model.pkl",
-        "SVM": "/mnt/data/svc_clf_model.pkl",
-        "Gradient Boosting": "/mnt/data/xgbC_model.pkl",
-        "MLP Classifier": "/mnt/data/mlp_clf_model.pkl",
-        "Naive Bayes": "/mnt/data/nbc_model.pkl",
-        "KNN": "/mnt/data/neigh_model.pkl",
-        "Random Forest Classifier":"",
-        "AdaBoost": "/mnt/data/abc_clf_model.pkl",
-        "Bagging": "/mnt/data/bagging_clf_model.pkl",
-        "Stacking": "/mnt/data/stack_clf_model.pkl"
+        "Decision Tree": "models/abc_clf_model.pkl",
+        "Random Forest": "models/bagging_clf_model.pkl",
+        "SVM": "models/svc_clf_model.pkl",
+        "Gradient Boosting": "models/xgbC_model.pkl",
+        "MLP Classifier": "models/mlp_clf_model.pkl",
+        "Naive Bayes": "models/nbc_model.pkl",
+        "KNN": "models/neigh_model.pkl",
+        "Random Forest Classifier":"models/rfc_clf_model.pkl",
+        "AdaBoost": "models/abc_clf_model.pkl",
+        "Bagging": "models/bagging_clf_model.pkl",
+        "Stacking": "models/stack_clf_model.pkl"
     }
 
     model_choice = st.selectbox("Select a Classification Model", list(model_files.keys()))
