@@ -61,7 +61,6 @@ if uploaded_file is not None:
     # Model selection
     model_files = {
         "Decision Tree": "models/abc_clf_model.pkl",
-        "Random Forest": "models/bagging_clf_model.pkl",
         "SVM": "models/svc_clf_model.pkl",
         "Gradient Boosting": "models/xgbC_model.pkl",
         "MLP Classifier": "models/mlp_clf_model.pkl",
